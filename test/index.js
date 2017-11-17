@@ -104,50 +104,36 @@ test('@nlib/humanReadable', (test) => {
 		});
 	});
 
-	// https://ja.wikipedia.org/wiki/%E5%91%BD%E6%95%B0%E6%B3%95
-	test('万億兆京垓𥝱穣溝澗正載極.../floor/1', (test) => {
+	test('😀🤣😎🤔/floor/1', (test) => {
 		[
 			[5 * Math.pow(10000, 0), '5'],
-			[5 * Math.pow(10000, 1), '5.0万'],
-			[5 * Math.pow(10000, 2), '5.0億'],
-			[5 * Math.pow(10000, 3), '5.0兆'],
-			[5 * Math.pow(10000, 4), '5.0京'],
-			[5 * Math.pow(10000, 5), '5.0垓'],
-			[5 * Math.pow(10000, 6), '5.0𥝱'],
-			[5 * Math.pow(10000, 7), '5.0穣'],
-			[5 * Math.pow(10000, 8), '5.0溝'],
-			[5 * Math.pow(10000, 9), '5.0澗'],
-			[5 * Math.pow(10000, 10), '5.0正'],
-			[5 * Math.pow(10000, 11), '5.0載'],
-			[5 * Math.pow(10000, 12), '5.0極'],
-			[5 * Math.pow(10000, 13), '5.0恒河沙'],
-			[5 * Math.pow(10000, 14), '5.0阿僧祇'],
-			[5 * Math.pow(10000, 15), '5.0那由他'],
-			[5 * Math.pow(10000, 16), '5.0不可思議'],
-			[5 * Math.pow(10000, 17), '5.0無量大数'],
+			[5 * Math.pow(10000, 1), '5.0😀'],
+			[5 * Math.pow(10000, 2), '5.0🤣'],
+			[5 * Math.pow(10000, 3), '5.0😎'],
+			[5 * Math.pow(10000, 4), '5.0🤔'],
 		]
 		.forEach(([size, expected]) => {
-			test(`humanReadable(${size}, {base: 10000, prefix: [...]}) -> ${expected}`, () => {
+			test(`humanReadable(${size}, {base: 10000, prefix: [...' 😀🤣😎🤔']}) -> ${expected}`, () => {
 				const actual = humanReadable(size, {
 					base: 10000,
-					prefix: [...' 万億兆京垓𥝱穣溝澗正載極', '恒河沙', '阿僧祇', '那由他', '不可思議', '無量大数'],
+					prefix: [...' 😀🤣😎🤔'],
 				});
 				assert.equal(actual, expected);
 			});
 		});
 	});
 
-	test('分厘毛/floor/1', (test) => {
+	test('1⃣2⃣3⃣/floor/1', (test) => {
 		[
-			[0.5, '5分'],
-			[0.05, '5厘'],
-			[0.005, '5毛'],
+			[0.5, '51⃣'],
+			[0.05, '52⃣'],
+			[0.005, '53⃣'],
 		]
 		.forEach(([size, expected]) => {
-			test(`humanReadable(${size}, {base: 10000, negativePrefix: [...' 分厘毛']}) -> ${expected}`, () => {
+			test(`humanReadable(${size}, {base: 10000, negativePrefix: [, '1⃣', '2⃣', '3⃣']}) -> ${expected}`, () => {
 				const actual = humanReadable(size, {
 					base: 10,
-					negativePrefix: [...' 分厘毛'],
+					negativePrefix: ['', '1⃣', '2⃣', '3⃣'],
 				});
 				assert.equal(actual, expected);
 			});
