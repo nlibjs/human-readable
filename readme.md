@@ -1,7 +1,7 @@
 # @nlib/human-readable
 
 [![Build Status](https://travis-ci.org/nlibjs/human-readable.svg?branch=master)](https://travis-ci.org/nlibjs/human-readable)
-[![Build status](https://ci.appveyor.com/api/projects/status/4epa2auy1gwqbe2j/branch/master?svg=true)](https://ci.appveyor.com/project/kei-ito/human-readable/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/nlibjs/human-readable?branch=mater&svg=true)](https://ci.appveyor.com/project/kei-ito/human-readable/branch/master)
 [![codecov](https://codecov.io/gh/nlibjs/human-readable/branch/master/graph/badge.svg)](https://codecov.io/gh/nlibjs/human-readable)
 [![dependencies Status](https://david-dm.org/nlibjs/human-readable/status.svg)](https://david-dm.org/nlibjs/human-readable)
 [![devDependencies Status](https://david-dm.org/nlibjs/human-readable/dev-status.svg)](https://david-dm.org/nlibjs/human-readable?type=dev)
