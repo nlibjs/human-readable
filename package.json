@@ -15,16 +15,14 @@
     "node": ">=6"
   },
   "repository": "nlibjs/human-readable",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "eslint": "eslint --max-warnings 0 'lib/**/*.js' 'test/**/*.js'",
-    "test": "node test && npm run eslint",
-    "test_coverage": "istanbul cover test && npm run eslint"
+    "lint": "nlib-lint src test",
+    "test": "node test",
+    "test_coverage": "istanbul cover test"
   },
   "devDependencies": {
-    "@nlib/lint": "0.0.5",
-    "@nlib/test": "^1.0.2",
-    "eslint": "^4.10.0",
+    "@nlib/lint": "^0.2.1",
     "istanbul": "^1.1.0-alpha.1"
   }
 }
