@@ -1,6 +1,6 @@
 const assert = require('assert');
 const console = require('console');
-const {HumanReadable} = require('..');
+const {HumanReadable} = require('../..');
 const tests = require('../tests');
 
 for (const [entries, options] of tests) {
