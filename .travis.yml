@@ -6,6 +6,7 @@ node_js:
 - '6'
 install:
 - npm install
+- npm install -g nyc eslint
 script:
 - npm run test_coverage
 - npm run lint
@@ -20,6 +21,3 @@ deploy:
   on:
     tags: true
     repo: nlibjs/human-readable
-notifications:
-  slack:
-    secure: lTgRdAROkxrtkJTM8zBd+UVyMlzXXv2jGmUjprwtoAcW9b32+Uaz01K628l2ppkgqHs7lETzsfZFIb/w0eJNmTii66suchUV76r8nDw4jAa6NK8HN4Oa97TTRykesnv+BpyzNeYdesLq50QWJO8s3ui/Gz6TUhj3JNNb1sWrCZE7JQ3s0ZaaGAoXX772q/VOQ2PF2VgNY8beL6//mAcT4Uxj/70eNflgwmiDkMTeak90aKFApUzeliydC9s5jQC6ltJSYswoFOvmKfVeaGFSSxwS6OANyqlJvJs5HBzCD2U40Ro2NFO/jMDFLgW7CE/Z8UmnnmANP0NRJwwRba7FxRzUoUOiJ7DSYpYcxAEds05I4Aml8G440o0iIXD7I2VubmL6PiSx/XG/BrgTK4WlEOH+0JWjdjUy8vpyvWE05HmcWxj1eb/KxsBB0GTPKw+A4BRRgWKRdxdFSH0IdslKoTxABhHQ3hdq7ouSj53IpGxuYwAodH99lfmNHJT2m0f3eHbAuKPAtd+1kagX37zUIhCAJDoMR5Ru5pxBiXq2vtqND1habLyJ3fnMEWBt3i1iA0ulGXJXDja6g30HdTca15aI261ruIOZLP41+FV8H90XcO4m0I9pVqUmCpZySG4GYGpiGv1OCIPGztcYQGH7uR29HoJSqWEUb45FIaoPKDA=
